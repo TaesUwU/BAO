@@ -7,8 +7,8 @@ const Index = ({ posts, title, description, ...props }) => {
   return (
     <Layout pageTitle={title}>
       <h1 className="title">Welcome to my server bitch!</h1>
-   
-    <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
+  
+      <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
           action="https://script.google.com/macros/s/AKfycbxVhHwzG_ERorwUpj1Hl7slXr8efseWNLBTkvdalg/exec">
 
 
@@ -26,28 +26,12 @@ const Index = ({ posts, title, description, ...props }) => {
 
         <br>
 
-        <label for="email"><em>Your</em> Email Address:</label>
-        <input id="email" name="email" type="email" value=""
-               required placeholder="your.name@email.com" />
-
-
 
         <button class="button-success pure-button button-xlarge">
             <i class="fa fa-paper-plane"></i>&nbsp;Send
         </button>
 
     </form>
-
-    <div style="display:none;" id="thankyou_message">
-        <h2>
-            <em>Thanks</em> for contacting us!
-            We will get back to you soon!
-        </h2>
-    </div>
-
-
-    <script data-cfasync="false" type="text/javascript"
-            src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
    
       <p className="description">{description}</p>
       <main>
