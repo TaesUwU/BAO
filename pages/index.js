@@ -17,14 +17,10 @@ const Index = ({ posts, title, description, ...props }) => {
         <label for="name">Name: </label>
         <input id="name" name="name" placeholder="What your Mom calls you" />
 
-        <br>
-
 
         <label for="message">Message: </label>
         <textarea id="message" name="message" rows="10"
                   placeholder="Tell us what's on your mind..."></textarea>
-
-        <br>
 
 
         <button class="button-success pure-button button-xlarge">
