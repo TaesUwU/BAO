@@ -38,7 +38,6 @@ const Index = ({ posts, title, description, ...props }) => {
 
     </form>
 
-    <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div style="display:none;" id="thankyou_message">
         <h2>
             <em>Thanks</em> for contacting us!
