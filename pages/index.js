@@ -7,15 +7,7 @@ const Index = ({ posts, title, description, ...props }) => {
   return (
     <Layout pageTitle={title}>
       <h1 className="title">Welcome to my server bitch!</h1>
-      <p className="description">{description}</p>
-      <main>
-        <PostList posts={posts} />
-      </main>
-    </Layout>
-  )
-}
-
-<form name="contact" method="POST" data-netlify="true">
+    <form name="contact" method="POST" data-netlify="true">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
@@ -35,6 +27,13 @@ const Index = ({ posts, title, description, ...props }) => {
     <button type="submit">Send</button>
   </p>
 </form>
+      <p className="description">{description}</p>
+      <main>
+        <PostList posts={posts} />
+      </main>
+    </Layout>
+  )
+}
 
 export default Index
 
