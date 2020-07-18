@@ -7,26 +7,49 @@ const Index = ({ posts, title, description, ...props }) => {
   return (
     <Layout pageTitle={title}>
       <h1 className="title">Welcome to my server bitch!</h1>
-    <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>   
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+   
+    <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
+          action="https://script.google.com/macros/s/AKfycbwM8uwUuGRAnzi7iU6k554gIKjvtKPsfEvsz881wXV8LQ6VMz_1/exec">
+
+
+
+
+        <label for="name">Name: </label>
+        <input id="name" name="name" placeholder="What your Mom calls you" />
+
+        <br>
+
+
+        <label for="message">Message: </label>
+        <textarea id="message" name="message" rows="10"
+                  placeholder="Tell us what's on your mind..."></textarea>
+
+        <br>
+
+        <label for="email"><em>Your</em> Email Address:</label>
+        <input id="email" name="email" type="email" value=""
+               required placeholder="your.name@email.com" />
+
+
+
+        <button class="button-success pure-button button-xlarge">
+            <i class="fa fa-paper-plane"></i>&nbsp;Send
+        </button>
+
+    </form>
+
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <div style="display:none;" id="thankyou_message">
+        <h2>
+            <em>Thanks</em> for contacting us!
+            We will get back to you soon!
+        </h2>
+    </div>
+
+
+    <script data-cfasync="false" type="text/javascript"
+            src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+   
       <p className="description">{description}</p>
       <main>
         <PostList posts={posts} />
