@@ -9,7 +9,7 @@ const Index = ({ posts, title, description, ...props }) => {
       <h1 className="title">Welcome to my server bitch!</h1>
    
     <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
-          action="https://script.google.com/macros/s/AKfycbwM8uwUuGRAnzi7iU6k554gIKjvtKPsfEvsz881wXV8LQ6VMz_1/exec">
+          action="https://script.google.com/macros/s/AKfycbxVhHwzG_ERorwUpj1Hl7slXr8efseWNLBTkvdalg/exec">
 
 
 
